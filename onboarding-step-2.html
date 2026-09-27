@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Onboarding Step 2 — Learny</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="tailwind.config.js"></script>
+<link rel="stylesheet" href="custom.css">
+</head>
+
+<body class="font-sans text-ink bg-canvas">
+<main class="min-h-screen flex items-center justify-center p-4 sm:p-8">
+  <section class="animate-cardin w-full max-w-[720px] bg-white/95 border border-line rounded-xl2 shadow-soft p-6 sm:p-9">
+    <a class="inline-flex items-center gap-2.5 font-extrabold text-lg" href="index.html"><span class="w-9 h-9 rounded-xl grid place-items-center bg-primary-tint">🎓</span><span>Learny</span></a>
+    <div class="my-7">
+      <div class="flex justify-between items-center text-sm text-muted mb-2"><span>Personalise your plan</span><strong class="text-ink">Step 2 of 3</strong></div>
+      <div class="h-2 bg-[#edf1f7] rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full transition-all duration-500" style="width:66.66%"></div></div>
+    </div>
+    <div>
+      <div class="text-primary font-extrabold text-sm mb-3">Your studies</div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-3">Tell us about your studies 📚</h1>
+      <p class="text-muted mb-7 leading-relaxed">We'll use this information to tailor explanations, quizzes and study recommendations.</p>
+      <form id="step2Form">
+        <div class="mb-5">
+          <label class="block font-bold mb-2" for="level">Grade / Class Level</label>
+          <select class="w-full min-h-[54px] border border-line rounded-xl px-4 py-3 bg-white focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary-tint" id="level">
+            <option value="">Choose your level</option>
+            <option>JSS1</option><option>JSS2</option><option>JSS3</option>
+            <option>SS1</option><option>SS2</option><option>SS3</option>
+            <option>100 Level</option><option>200 Level</option><option>300 Level</option><option>400 Level</option>
+            <option>A-Level</option><option>Other</option>
+          </select>
+        </div>
+        <div class="mb-5">
+          <label class="block font-bold mb-2">Your Subjects</label>
+          <div class="flex flex-wrap gap-2.5 mt-2">
+            <div><input class="peer sr-only" type="checkbox" id="subject0" name="subjects" value="Mathematics"><label class="inline-flex items-center px-3.5 py-2.5 border border-line rounded-full bg-white cursor-pointer text-sm font-semibold transition peer-checked:bg-primary-tint peer-checked:border-primary peer-checked:text-primary peer-checked:-translate-y-0.5" for="subject0">Mathematics</label></div>
+            <div><input class="peer sr-only" type="checkbox" id="subject1" name="subjects" value="English Language"><label class="inline-flex items-center px-3.5 py-2.5 border border-line rounded-full bg-white cursor-pointer text-sm font-semibold transition peer-checked:bg-primary-tint peer-checked:border-primary peer-checked:text-primary peer-checked:-translate-y-0.5" for="subject1">English Language</label></div>
+            <div><input class="peer sr-only" type="checkbox" id="subject2" name="subjects" value="Biology"><label class="inline-flex items-center px-3.5 py-2.5 border border-line rounded-full bg-white cursor-pointer text-sm font-semibold transition peer-checked:bg-primary-tint peer-checked:border-primary peer-checked:text-primary peer-checked:-translate-y-0.5" for="subject2">Biology</label></div>
+            <div><input class="peer sr-only" type="checkbox" id="subject3" name="subjects" value="Chemistry"><label class="inline-flex items-center px-3.5 py-2.5 border border-line rounded-full bg-white cursor-pointer text-sm font-semibold transition peer-checked:bg-primary-tint peer-checked:border-primary peer-checked:text-primary peer-checked:-translate-y-0.5" for="subject3">Chemistry</label></div>
+            <div><input class="peer sr-only" type="checkbox" id="subject4" name="subjects" value="Physics"><label class="inline-flex items-center px-3.5 py-2.5 border border-line rounded-full bg-white cursor-pointer text-sm font-semibold transition peer-checked:bg-primary-tint peer-checked:border-primary peer-checked:text-primary peer-checked:-translate-y-0.5" for="subject4">Physics</label></div>
+            <div><input class="peer sr-only" type="checkbox" id="subject5" name="subjects" value="Economics"><label class="inline-flex items-center px-3.5 py-2.5 border border-line rounded-full bg-white cursor-pointer text-sm font-semibold transition peer-checked:bg-primary-tint peer-checked:border-primary peer-checked:text-primary peer-checked:-translate-y-0.5" for="subject5">Economics</label></div>
+            <div><input class="peer sr-only" type="checkbox" id="subject6" name="subjects" value="Government"><label class="inline-flex items-center px-3.5 py-2.5 border border-line rounded-full bg-white cursor-pointer text-sm font-semibold transition peer-checked:bg-primary-tint peer-checked:border-primary peer-checked:text-primary peer-checked:-translate-y-0.5" for="subject6">Government</label></div>
+            <div><input class="peer sr-only" type="checkbox" id="subject7" name="subjects" value="Literature"><label class="inline-flex items-center px-3.5 py-2.5 border border-line rounded-full bg-white cursor-pointer text-sm font-semibold transition peer-checked:bg-primary-tint peer-checked:border-primary peer-checked:text-primary peer-checked:-translate-y-0.5" for="subject7">Literature</label></div>
+            <div><input class="peer sr-only" type="checkbox" id="subject8" name="subjects" value="Further Mathematics"><label class="inline-flex items-center px-3.5 py-2.5 border border-line rounded-full bg-white cursor-pointer text-sm font-semibold transition peer-checked:bg-primary-tint peer-checked:border-primary peer-checked:text-primary peer-checked:-translate-y-0.5" for="subject8">Further Mathematics</label></div>
+            <div><input class="peer sr-only" type="checkbox" id="subject9" name="subjects" value="Commerce"><label class="inline-flex items-center px-3.5 py-2.5 border border-line rounded-full bg-white cursor-pointer text-sm font-semibold transition peer-checked:bg-primary-tint peer-checked:border-primary peer-checked:text-primary peer-checked:-translate-y-0.5" for="subject9">Commerce</label></div>
+            <div><input class="peer sr-only" type="checkbox" id="subject10" name="subjects" value="Geography"><label class="inline-flex items-center px-3.5 py-2.5 border border-line rounded-full bg-white cursor-pointer text-sm font-semibold transition peer-checked:bg-primary-tint peer-checked:border-primary peer-checked:text-primary peer-checked:-translate-y-0.5" for="subject10">Geography</label></div>
+            <div><input class="peer sr-only" type="checkbox" id="subject11" name="subjects" value="Agricultural Science"><label class="inline-flex items-center px-3.5 py-2.5 border border-line rounded-full bg-white cursor-pointer text-sm font-semibold transition peer-checked:bg-primary-tint peer-checked:border-primary peer-checked:text-primary peer-checked:-translate-y-0.5" for="subject11">Agricultural Science</label></div>
+            <div><input class="peer sr-only" type="checkbox" id="subject12" name="subjects" value="Computer Science"><label class="inline-flex items-center px-3.5 py-2.5 border border-line rounded-full bg-white cursor-pointer text-sm font-semibold transition peer-checked:bg-primary-tint peer-checked:border-primary peer-checked:text-primary peer-checked:-translate-y-0.5" for="subject12">Computer Science</label></div>
+            <div><input class="peer sr-only" type="checkbox" id="subject13" name="subjects" value="History"><label class="inline-flex items-center px-3.5 py-2.5 border border-line rounded-full bg-white cursor-pointer text-sm font-semibold transition peer-checked:bg-primary-tint peer-checked:border-primary peer-checked:text-primary peer-checked:-translate-y-0.5" for="subject13">History</label></div>
+            <div><input class="peer sr-only" type="checkbox" id="subject14" name="subjects" value="French"><label class="inline-flex items-center px-3.5 py-2.5 border border-line rounded-full bg-white cursor-pointer text-sm font-semibold transition peer-checked:bg-primary-tint peer-checked:border-primary peer-checked:text-primary peer-checked:-translate-y-0.5" for="subject14">French</label></div>
+            <div><input class="peer sr-only" type="checkbox" id="subject15" name="subjects" value="Other"><label class="inline-flex items-center px-3.5 py-2.5 border border-line rounded-full bg-white cursor-pointer text-sm font-semibold transition peer-checked:bg-primary-tint peer-checked:border-primary peer-checked:text-primary peer-checked:-translate-y-0.5" for="subject15">Other</label></div>
+          </div>
+        </div>
+        <div class="mb-5">
+          <label class="block font-bold mb-2" for="country">Country</label>
+          <select class="w-full min-h-[54px] border border-line rounded-xl px-4 py-3 bg-white focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary-tint" id="country">
+            <option value="">Choose your country</option>
+          </select>
+        </div>
+        <div class="hidden text-red-600 text-sm mt-2" id="step2Error">Please choose a level, at least one subject, and your country.</div>
+        <div class="mt-7"><button class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary text-white font-bold px-6 py-3.5 min-h-[52px] transition duration-200 hover:bg-primary-dark" type="submit">Continue →</button></div>
+      </form>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+<script src="theme.js"></script>
+<script src="reveal.js"></script>
+<script src="navbar.js"></script>
+<script src="onboarding.js"></script>
+
+</body></html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Onboarding Step 3 — Learny</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="tailwind.config.js"></script>
+<link rel="stylesheet" href="custom.css">
+</head>
+
+<body class="font-sans text-ink bg-canvas">
+<main class="min-h-screen flex items-center justify-center p-4 sm:p-8">
+  <section class="animate-cardin w-full max-w-[720px] bg-white/95 border border-line rounded-xl2 shadow-soft p-6 sm:p-9">
+    <a class="inline-flex items-center gap-2.5 font-extrabold text-lg" href="index.html"><span class="w-9 h-9 rounded-xl grid place-items-center bg-primary-tint">🎓</span><span>Learny</span></a>
+    <div class="my-7">
+      <div class="flex justify-between items-center text-sm text-muted mb-2"><span>Almost there</span><strong class="text-ink">Step 3 of 3</strong></div>
+      <div class="h-2 bg-[#edf1f7] rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full transition-all duration-500" style="width:100%"></div></div>
+    </div>
+    <div>
+      <div class="text-primary font-extrabold text-sm mb-3">Build your routine</div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-3">What's your learning goal? 🎯</h1>
+      <p class="text-muted mb-7 leading-relaxed">Pick one goal and a daily study time so Learny can keep your plan realistic.</p>
+      <form id="step3Form">
+        <label class="block font-bold mb-2">Your main goal</label>
+        <div class="grid grid-cols-2 gap-3.5">
+          <label class="relative block border border-line rounded-xl2 bg-white p-4 cursor-pointer transition min-h-[94px] hover:-translate-y-1 hover:shadow-softsm has-[:checked]:border-primary has-[:checked]:bg-primary-tint has-[:checked]:shadow-softsm">
+            <input class="sr-only" type="radio" name="goal" value="Score high in my exams"><div class="text-2xl mb-2">🏆</div><div class="font-extrabold leading-snug">Score high in my exams</div>
+          </label>
+          <label class="relative block border border-line rounded-xl2 bg-white p-4 cursor-pointer transition min-h-[94px] hover:-translate-y-1 hover:shadow-softsm has-[:checked]:border-primary has-[:checked]:bg-primary-tint has-[:checked]:shadow-softsm">
+            <input class="sr-only" type="radio" name="goal" value="Understand my subjects better"><div class="text-2xl mb-2">💡</div><div class="font-extrabold leading-snug">Understand my subjects better</div>
+          </label>
+          <label class="relative block border border-line rounded-xl2 bg-white p-4 cursor-pointer transition min-h-[94px] hover:-translate-y-1 hover:shadow-softsm has-[:checked]:border-primary has-[:checked]:bg-primary-tint has-[:checked]:shadow-softsm">
+            <input class="sr-only" type="radio" name="goal" value="Stay consistent with studying"><div class="text-2xl mb-2">📅</div><div class="font-extrabold leading-snug">Stay consistent with studying</div>
+          </label>
+          <label class="relative block border border-line rounded-xl2 bg-white p-4 cursor-pointer transition min-h-[94px] hover:-translate-y-1 hover:shadow-softsm has-[:checked]:border-primary has-[:checked]:bg-primary-tint has-[:checked]:shadow-softsm">
+            <input class="sr-only" type="radio" name="goal" value="Prepare for university"><div class="text-2xl mb-2">🎓</div><div class="font-extrabold leading-snug">Prepare for university</div>
+          </label>
+        </div>
+        <div class="mt-7">
+          <label class="block font-bold mb-2">How long can you study daily?</label>
+          <div class="grid grid-cols-2 gap-3.5">
+            <label class="relative block border border-line rounded-xl2 bg-white p-4 cursor-pointer transition min-h-[94px] hover:-translate-y-1 hover:shadow-softsm has-[:checked]:border-primary has-[:checked]:bg-primary-tint has-[:checked]:shadow-softsm">
+              <input class="sr-only" type="radio" name="studyTime" value="15 minutes"><div class="text-2xl mb-2">⚡</div><div class="font-extrabold leading-snug">15 minutes</div>
+            </label>
+            <label class="relative block border border-line rounded-xl2 bg-white p-4 cursor-pointer transition min-h-[94px] hover:-translate-y-1 hover:shadow-softsm has-[:checked]:border-primary has-[:checked]:bg-primary-tint has-[:checked]:shadow-softsm">
+              <input class="sr-only" type="radio" name="studyTime" value="30 minutes"><div class="text-2xl mb-2">📖</div><div class="font-extrabold leading-snug">30 minutes</div>
+            </label>
+            <label class="relative block border border-line rounded-xl2 bg-white p-4 cursor-pointer transition min-h-[94px] hover:-translate-y-1 hover:shadow-softsm has-[:checked]:border-primary has-[:checked]:bg-primary-tint has-[:checked]:shadow-softsm">
+              <input class="sr-only" type="radio" name="studyTime" value="1 hour"><div class="text-2xl mb-2">🔥</div><div class="font-extrabold leading-snug">1 hour</div>
+            </label>
+            <label class="relative block border border-line rounded-xl2 bg-white p-4 cursor-pointer transition min-h-[94px] hover:-translate-y-1 hover:shadow-softsm has-[:checked]:border-primary has-[:checked]:bg-primary-tint has-[:checked]:shadow-softsm">
+              <input class="sr-only" type="radio" name="studyTime" value="2+ hours"><div class="text-2xl mb-2">💪</div><div class="font-extrabold leading-snug">2+ hours</div>
+            </label>
+          </div>
+        </div>
+        <div class="hidden text-red-600 text-sm mt-2" id="step3Error">Please select a goal and your daily study time.</div>
+        <div class="mt-7"><button class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary text-white font-bold px-6 py-3.5 min-h-[52px] transition duration-200 hover:bg-primary-dark" type="submit">Finish Setup →</button></div>
+      </form>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+<script src="theme.js"></script>
+<script src="reveal.js"></script>
+<script src="navbar.js"></script>
+<script src="onboarding.js"></script>
+
+</body></html>

@@ -1,0 +1,43 @@
+/* The handful of things Tailwind utilities can't express directly:
+   theme CSS variables, keyframes, and the scroll-reveal base state. */
+:root{
+  --primary:#2563eb;
+  --primary-dark:#1d4ed8;
+  --primary-tint:#eaf1ff;
+  --mint:#0f9d68;
+  --mint-tint:#e3f8ee;
+  --coral:#ff6b5f;
+  --ink:#172033;
+  --muted:#687386;
+  --line:#e8edf5;
+  --bg:#f8fafc;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+}
+
+/* one shared, restrained scroll-reveal system */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s cubic-bezier(.22,.8,.32,1),transform .6s cubic-bezier(.22,.8,.32,1)}
+.reveal.in-view{opacity:1;transform:none}
+.reveal-item{opacity:0;transform:translateY(14px);transition:opacity .55s cubic-bezier(.22,.8,.32,1),transform .55s cubic-bezier(.22,.8,.32,1)}
+.reveal-group.in-view .reveal-item{opacity:1;transform:none}
+
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes fall{to{transform:translateY(820px) rotate(360deg);opacity:0}}
+@keyframes cardIn{from{opacity:0;transform:translateY(16px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.animate-floaty{animation:floaty 6s ease-in-out infinite}
+.animate-cardin{animation:cardIn .5s cubic-bezier(.22,.8,.32,1) both}
+.confetti-piece{position:absolute;top:-30px;animation:fall linear infinite;color:var(--primary)}
+
+/* small pieces of interactive state that are driven by JS, not by a
+   Tailwind variant */
+.theme-swatch{width:22px;height:22px;border-radius:9999px;border:2px solid transparent;cursor:pointer;transition:transform .15s}
+.theme-swatch:hover{transform:scale(1.15)}
+.theme-swatch.active{border-color:var(--ink)}
+.country-tabs button.active{background:var(--primary);border-color:var(--primary);color:#fff}
+.accordion-item .accordion-body{display:none}
+.accordion-item.open .accordion-body{display:block;animation:fadeIn .25s ease}
+.accordion-item.open .accordion-icon{transform:rotate(45deg)}
+.accordion-icon{display:inline-block;transition:transform .25s cubic-bezier(.22,.8,.32,1);color:var(--primary)}

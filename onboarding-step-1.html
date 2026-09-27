@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Onboarding Step 1 — Learny</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="tailwind.config.js"></script>
+<link rel="stylesheet" href="custom.css">
+</head>
+
+<body class="font-sans text-ink bg-canvas">
+<main class="min-h-screen flex items-center justify-center p-4 sm:p-8">
+  <section class="animate-cardin w-full max-w-[720px] bg-white/95 border border-line rounded-xl2 shadow-soft p-6 sm:p-9">
+    <a class="inline-flex items-center gap-2.5 font-extrabold text-lg" href="index.html"><span class="w-9 h-9 rounded-xl grid place-items-center bg-primary-tint">🎓</span><span>Learny</span></a>
+    <div class="my-7">
+      <div class="flex justify-between items-center text-sm text-muted mb-2"><span>Getting started</span><strong class="text-ink">Step 1 of 3</strong></div>
+      <div class="h-2 bg-[#edf1f7] rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full transition-all duration-500" style="width:33.33%"></div></div>
+    </div>
+    <div>
+      <div class="text-primary font-extrabold text-sm mb-3">Let's get to know you</div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-3">Welcome to Learny 👋</h1>
+      <p class="text-muted mb-7 leading-relaxed">Let's set up your personal learning experience in 3 quick steps.</p>
+      <form id="step1Form">
+        <label class="block font-bold mb-2" for="firstName">What's your first name?</label>
+        <input class="w-full min-h-[54px] border border-line rounded-xl px-4 py-3 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary-tint" id="firstName" type="text" placeholder="e.g. Chidi" autocomplete="given-name">
+        <div class="hidden text-red-600 text-sm mt-2" id="nameError">Please enter your first name.</div>
+        <div class="mt-7"><button class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary text-white font-bold px-6 py-3.5 min-h-[52px] transition duration-200 hover:bg-primary-dark" type="submit">Continue →</button></div>
+      </form>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+<script src="theme.js"></script>
+<script src="reveal.js"></script>
+<script src="navbar.js"></script>
+<script src="onboarding.js"></script>
+
+</body></html>

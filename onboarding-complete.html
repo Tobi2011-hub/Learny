@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Onboarding Complete — Learny</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="tailwind.config.js"></script>
+<link rel="stylesheet" href="custom.css">
+</head>
+
+<body class="font-sans text-ink bg-canvas">
+<main class="min-h-screen flex items-center justify-center p-4 sm:p-8 bg-gradient-to-br from-primary-tint via-white to-[#fff0ed]">
+  <section class="animate-cardin relative w-full max-w-[720px] bg-white/95 border border-line rounded-xl2 shadow-soft p-6 sm:p-9 text-center">
+    <div id="confetti" class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true"></div>
+    <a class="inline-flex items-center justify-center gap-2.5 font-extrabold text-lg" href="index.html"><span class="w-9 h-9 rounded-xl grid place-items-center bg-primary-tint">🎓</span><span>Learny</span></a>
+    <div class="text-7xl animate-floaty mt-4">🎉</div>
+    <div>
+      <div class="text-primary font-extrabold text-sm mb-3">Setup complete</div>
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-3">You're all set, <span id="userName">Learner</span>!</h1>
+      <p class="text-muted mb-7 leading-relaxed">Your personalized learning journey starts now.</p>
+      <div class="grid gap-3 max-w-[480px] mx-auto">
+        <a class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary text-white font-bold px-6 py-3.5 min-h-[52px] transition duration-200 hover:bg-primary-dark" href="quiz.html">Take my first quiz →</a>
+        <a class="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-primary text-primary font-bold px-6 py-3.5 min-h-[52px] transition duration-200 hover:bg-primary hover:text-white" href="upload-material.html">Upload a study material</a>
+      </div>
+      <p class="text-sm text-muted mt-4">You can update your preferences later from your profile.</p>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+<script src="theme.js"></script>
+<script src="reveal.js"></script>
+<script src="navbar.js"></script>
+<script src="complete.js"></script>
+
+</body></html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Upgrade — Learny</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="tailwind.config.js"></script>
+<link rel="stylesheet" href="custom.css">
+</head>
+
+<body class="font-sans text-ink bg-gradient-to-b from-[#f8fbff] via-white to-canvas">
+<div id="siteNav"></div>
+
+<header class="reveal in-view text-center pt-14 pb-8 px-4">
+  <div class="text-primary font-bold text-sm mb-2">Upgrade your study experience</div>
+  <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-3">Simple pricing for serious students.</h1>
+  <p class="text-muted max-w-[650px] mx-auto leading-relaxed">Choose the region that matches your onboarding country — it also decides the payment provider.</p>
+</header>
+
+<main class="w-[92%] max-w-[1160px] mx-auto pb-14">
+  <ul class="country-tabs flex justify-center gap-2.5 my-7 list-none p-0">
+    <li><button id="nigeria-tab" class="active border border-line bg-white text-muted font-extrabold px-5 py-2.5 rounded-full cursor-pointer transition" data-region="Nigeria" type="button">🇳🇬 Nigeria</button></li>
+    <li><button id="international-tab" class="border border-line bg-white text-muted font-extrabold px-5 py-2.5 rounded-full cursor-pointer transition" data-region="International" type="button">🌍 International</button></li>
+  </ul>
+
+  <section id="nigeria" class="reveal-group grid sm:grid-cols-3 gap-5">
+    <div class="reveal-item bg-white border border-line rounded-xl2 p-6 shadow-softsm transition duration-200 hover:-translate-y-1">
+      <div class="font-extrabold text-lg">Free Trial</div>
+      <div class="text-4xl font-extrabold tracking-tight mt-3.5">₦0</div><div class="text-muted mb-4">for 14 days</div>
+      <p class="text-sm text-muted min-h-[44px]">Try the core Learny experience before upgrading.</p>
+      <ul class="text-sm space-y-2 my-5"><li>✓ 5 AI Tutor messages / day</li><li>✓ 2 quizzes / day</li><li>✓ 1 flashcard deck / day</li><li>✓ 3 material uploads</li><li>✓ Focus Timer &amp; Planner</li><li>✓ Notes</li></ul>
+      <a class="w-full inline-flex items-center justify-center gap-2 rounded-xl border-2 border-primary text-primary font-bold px-6 py-3.5 min-h-[52px] transition duration-200 hover:bg-primary hover:text-white" href="onboarding-step-1.html">Start Free Trial</a>
+    </div>
+    <div class="reveal-item relative bg-white border-2 border-primary rounded-xl2 p-6 transition duration-200 hover:-translate-y-1">
+      <span class="absolute right-5 top-5 bg-primary-tint text-primary text-xs font-extrabold px-2.5 py-1.5 rounded-full">Monthly</span>
+      <div class="font-extrabold text-lg">Student Monthly</div>
+      <div class="text-4xl font-extrabold tracking-tight mt-3.5">₦1,500</div><div class="text-muted mb-4">/ month</div>
+      <p class="text-sm text-muted min-h-[44px]">Full access with monthly flexibility.</p>
+      <ul class="text-sm space-y-2 my-5"><li>✓ Unlimited AI Tutor</li><li>✓ Unlimited quizzes &amp; flashcards</li><li>✓ Unlimited uploads</li><li>✓ Chapter summaries</li><li>✓ Exam prep library</li><li>✓ Streaks, XP &amp; leagues</li><li>✓ Priority AI responses</li></ul>
+      <button class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary text-white font-bold px-6 py-3.5 min-h-[52px] transition duration-200 hover:bg-primary-dark" data-payment="paystack" data-plan="Student Monthly" data-region="Nigeria">Pay with Paystack →</button>
+    </div>
+    <div class="reveal-item relative bg-white border border-line rounded-xl2 p-6 shadow-softsm transition duration-200 hover:-translate-y-1">
+      <span class="absolute right-5 top-5 bg-primary-tint text-primary text-xs font-extrabold px-2.5 py-1.5 rounded-full">Save 33%</span>
+      <div class="font-extrabold text-lg">Student Yearly</div>
+      <div class="text-4xl font-extrabold tracking-tight mt-3.5">₦12,000</div><div class="text-muted mb-4">/ year</div>
+      <p class="text-sm text-muted min-h-[44px]">Everything in Student Monthly, billed yearly.</p>
+      <ul class="text-sm space-y-2 my-5"><li>✓ Unlimited AI Tutor</li><li>✓ Unlimited quizzes &amp; flashcards</li><li>✓ Unlimited uploads</li><li>✓ Chapter summaries</li><li>✓ Exam prep library</li><li>✓ Streaks, XP &amp; leagues</li><li>✓ Priority AI responses</li></ul>
+      <button class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary text-white font-bold px-6 py-3.5 min-h-[52px] transition duration-200 hover:bg-primary-dark" data-payment="paystack" data-plan="Student Yearly" data-region="Nigeria">Pay with Paystack →</button>
+    </div>
+  </section>
+
+  <section id="international" class="hidden reveal-group grid sm:grid-cols-3 gap-5">
+    <div class="reveal-item bg-white border border-line rounded-xl2 p-6 shadow-softsm transition duration-200 hover:-translate-y-1">
+      <div class="font-extrabold text-lg">Free Trial</div>
+      <div class="text-4xl font-extrabold tracking-tight mt-3.5">$0</div><div class="text-muted mb-4">for 14 days</div>
+      <p class="text-sm text-muted min-h-[44px]">Try the core Learny experience before upgrading.</p>
+      <ul class="text-sm space-y-2 my-5"><li>✓ 5 AI Tutor messages / day</li><li>✓ 2 quizzes / day</li><li>✓ 1 flashcard deck / day</li><li>✓ 3 material uploads</li><li>✓ Focus Timer &amp; Planner</li><li>✓ Notes</li></ul>
+      <a class="w-full inline-flex items-center justify-center gap-2 rounded-xl border-2 border-primary text-primary font-bold px-6 py-3.5 min-h-[52px] transition duration-200 hover:bg-primary hover:text-white" href="onboarding-step-1.html">Start Free Trial</a>
+    </div>
+    <div class="reveal-item relative bg-white border-2 border-primary rounded-xl2 p-6 transition duration-200 hover:-translate-y-1">
+      <span class="absolute right-5 top-5 bg-primary-tint text-primary text-xs font-extrabold px-2.5 py-1.5 rounded-full">Monthly</span>
+      <div class="font-extrabold text-lg">Student Monthly</div>
+      <div class="text-4xl font-extrabold tracking-tight mt-3.5">$3.99</div><div class="text-muted mb-4">/ month</div>
+      <p class="text-sm text-muted min-h-[44px]">Full access with monthly flexibility.</p>
+      <ul class="text-sm space-y-2 my-5"><li>✓ Unlimited AI Tutor</li><li>✓ Unlimited quizzes &amp; flashcards</li><li>✓ Unlimited uploads</li><li>✓ Chapter summaries</li><li>✓ Exam prep library</li><li>✓ Streaks, XP &amp; leagues</li><li>✓ Priority AI responses</li></ul>
+      <button class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary text-white font-bold px-6 py-3.5 min-h-[52px] transition duration-200 hover:bg-primary-dark" data-payment="stripe" data-plan="Student Monthly" data-region="International">Pay with Stripe →</button>
+    </div>
+    <div class="reveal-item relative bg-white border border-line rounded-xl2 p-6 shadow-softsm transition duration-200 hover:-translate-y-1">
+      <span class="absolute right-5 top-5 bg-primary-tint text-primary text-xs font-extrabold px-2.5 py-1.5 rounded-full">Save 37%</span>
+      <div class="font-extrabold text-lg">Student Yearly</div>
+      <div class="text-4xl font-extrabold tracking-tight mt-3.5">$29.99</div><div class="text-muted mb-4">/ year</div>
+      <p class="text-sm text-muted min-h-[44px]">Everything in Student Monthly, billed yearly.</p>
+      <ul class="text-sm space-y-2 my-5"><li>✓ Unlimited AI Tutor</li><li>✓ Unlimited quizzes &amp; flashcards</li><li>✓ Unlimited uploads</li><li>✓ Chapter summaries</li><li>✓ Exam prep library</li><li>✓ Streaks, XP &amp; leagues</li><li>✓ Priority AI responses</li></ul>
+      <button class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary text-white font-bold px-6 py-3.5 min-h-[52px] transition duration-200 hover:bg-primary-dark" data-payment="stripe" data-plan="Student Yearly" data-region="International">Pay with Stripe →</button>
+    </div>
+  </section>
+</main>
+
+<section class="bg-white py-16">
+  <div class="w-[92%] max-w-[760px] mx-auto">
+    <h2 class="text-center text-3xl font-extrabold tracking-tight mb-8">Frequently Asked Questions</h2>
+    <div id="faqAccordion" class="space-y-2.5">
+      <div class="accordion-item open border border-line rounded-xl overflow-hidden">
+        <h2 class="accordion-header m-0"><button class="w-full text-left bg-white border-0 px-5 py-4 font-bold cursor-pointer flex justify-between items-center" type="button">Can I try Learny before paying? <span class="accordion-icon">＋</span></button></h2>
+        <div class="accordion-body px-5 pb-4 text-sm text-muted">Yes. Learny includes a 14-day free trial at ₦0 or $0 depending on your region.</div>
+      </div>
+      <div class="accordion-item border border-line rounded-xl overflow-hidden">
+        <h2 class="accordion-header m-0"><button class="w-full text-left bg-white border-0 px-5 py-4 font-bold cursor-pointer flex justify-between items-center" type="button">Which payment provider is used? <span class="accordion-icon">＋</span></button></h2>
+        <div class="accordion-body px-5 pb-4 text-sm text-muted">Nigeria pricing uses Paystack. International pricing uses Stripe.</div>
+      </div>
+      <div class="accordion-item border border-line rounded-xl overflow-hidden">
+        <h2 class="accordion-header m-0"><button class="w-full text-left bg-white border-0 px-5 py-4 font-bold cursor-pointer flex justify-between items-center" type="button">Can I change plans later? <span class="accordion-icon">＋</span></button></h2>
+        <div class="accordion-body px-5 pb-4 text-sm text-muted">Yes. Your production billing system can allow upgrades, downgrades and cancellations from account settings.</div>
+      </div>
+      <div class="accordion-item border border-line rounded-xl overflow-hidden">
+        <h2 class="accordion-header m-0"><button class="w-full text-left bg-white border-0 px-5 py-4 font-bold cursor-pointer flex justify-between items-center" type="button">Where is my country saved? <span class="accordion-icon">＋</span></button></h2>
+        <div class="accordion-body px-5 pb-4 text-sm text-muted">The demo stores onboarding preferences in your browser's localStorage under the Learny profile key.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="app.js"></script>
+<script src="theme.js"></script>
+<script src="reveal.js"></script>
+<script src="navbar.js"></script>
+<script src="upgrade.js"></script>
+
+</body></html>
